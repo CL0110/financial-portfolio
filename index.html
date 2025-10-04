@@ -1,198 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claire Lee Bolam | Financial Analyst & Data Strategist</title>
-  <meta name="description" content="Portfolio of Claire Lee Bolam, showcasing data-driven investment research, financial modeling, and risk analytics." />
-  <meta name="author" content="Claire Lee Bolam" />
-  <link rel="canonical" href="https://cl0110.github.io/financial-portfolio/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claire Lee Bolam - Financial Analyst Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Claire Lee Bolam | Financial Analyst & Data Strategist" />
-  <meta property="og:description" content="Portfolio of Claire Lee Bolam, showcasing data-driven investment research, financial modeling, and risk analytics." />
-  <meta property="og:image" content="/Me.jpg" />
-  <meta property="og:url" content="https://cl0110.github.io/financial-portfolio/" />
-  <meta property="og:type" content="website" />
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Claire Lee Bolam | Financial Analyst & Data Strategist" />
-  <meta name="twitter:description" content="Portfolio of Claire Lee Bolam, showcasing data-driven investment research, financial modeling, and risk analytics." />
-  <meta name="twitter:image" content="/Me.jpg" />
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #1a1a1a;
-      --accent: #005f99;
-      --card: #f4f4f4;
-    }
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header, section, footer {
-      padding: 2rem;
-      max-width: 960px;
-      margin: auto;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: var(--accent);
-      text-decoration: none;
-      margin: 0.5rem;
-    }
-    .hero {
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-    .hero img {
-      width: 120px;
-      border-radius: 50%;
-    }
-    .hero h1 {
-      font-size: 2rem;
-      margin: 1rem 0 0.5rem;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-    .cta {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      padding: 0.75rem 1.25rem;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-    .grid {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    .card {
-      background: var(--card);
-      padding: 1rem;
-      border-radius: 6px;
-    }
-    h2 {
-      margin-top: 2rem;
-      font-size: 1.5rem;
-      color: var(--accent);
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-      }
-    }
-  </style>
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #718096;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4a5568;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            background: rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+            border-color: rgba(102, 126, 234, 0.3);
+        }
+
+        .portfolio-item h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .portfolio-item p {
+            color: #718096;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .skill-category h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            color: #718096;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .skill-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 0.8rem;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .floating-circle:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-circle:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 5s;
+        }
+
+        .floating-circle:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(15px) rotate(240deg); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <strong>Claire Lee Bolam</strong>
-      <div>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <img src="/Me.jpg" alt="Claire Lee Bolam" />
-    <h1>Financial Analyst & Data Strategist</h1>
-    <p>Transforming data into investment intelligence through financial modeling, market research, and risk analytics.</p>
-    <a class="cta" href="#contact">Let’s Connect</a>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a data-driven financial analyst with a strong foundation in investment research, financial modeling, and risk analytics. My work blends rigorous quantitative methods with market insight to uncover value, assess downside risk, and support high-stakes decision-making.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Equity Valuation Model</h3>
-        <p>DCF model with sensitivity analysis for tech equities. Improved forecast accuracy by 15%.</p>
-      </div>
-      <div class="card">
-        <h3>Risk Management Dashboard</h3>
-        <p>Interactive dashboard for VaR, beta, and correlation metrics on a $50M fund.</p>
-      </div>
-      <div class="card">
-        <h3>Market Trend Analysis</h3>
-        <p>ML model for trend detection and entry/exit signals. Backtested over 3 years.</p>
-      </div>
-      <div class="card">
-        <h3>Credit Risk Assessment</h3>
-        <p>Credit scoring model reduced default risk by 22% using feature engineering.</p>
-      </div>
-      <div class="card">
-        <h3>ESG Investment Framework</h3>
-        <p>Analyzed ESG score correlation with financial performance across 500+ companies.</p>
-      </div>
-      <div class="card">
-        <h3>Crypto Portfolio Optimizer</h3>
-        <p>Modern Portfolio Theory applied to crypto assets with real-time rebalancing.</p>
-      </div>
+    <div class="floating-elements">
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
     </div>
-  </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Programming:</strong> Python, R, SQL, VBA</li>
-      <li><strong>Modeling:</strong> DCF, Monte Carlo, Options Pricing</li>
-      <li><strong>Risk Analytics:</strong> VaR, CVaR, Stress Testing</li>
-      <li><strong>Visualization:</strong> Tableau, Power BI, ggplot2, Plotly</li>
-    </ul>
-  </section>
+  <div class="container">
+    <div class="hero">
+        <div class="profile-image">
+            <img src="Me.jpg" alt="Claire Lee Bolam" style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain;">
+        </div>
+        <h1>Claire Lee Bolam</h1>
+        <p class="subtitle">Financial Analyst & Data Strategist</p>
+        <div class="contact-info">
+            <a href="mailto:claire.lee.bolam@gmail.com" class="contact-item">
+                📧 claire.lee.bolam@gmail.com
+            </a>
+        </div>
+    </div>
+</div>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>CFA Level II Candidate</li>
-      <li>Financial Modeling & Valuation (CFI)</li>
-      <li>Python for Finance (DataCamp)</li>
-      <li>Bloomberg Market Concepts</li>
-    </ul>
-  </section>
+        <div class="section">
+            <h2>About Me</h2>
+            <p style="font-size: 1.1rem; color: #4a5568; line-height: 1.8;">
+                Passionate financial analyst with expertise in data-driven investment strategies, risk assessment, and market analysis. I combine advanced analytical skills with cutting-edge technology to deliver actionable insights that drive business growth and optimize financial performance.
+            </p>
+        </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:claire.lee.bolam@gmail.com">claire.lee.bolam@gmail.com</a></p>
-    <p>Let’s connect to explore opportunities in investment research, financial analytics, or portfolio strategy.</p>
-  </section>
+        <div class="section">
+            <h2>Portfolio Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>Equity Valuation Model</h3>
+                    <p>Comprehensive DCF model with sensitivity analysis for tech sector companies. Achieved 15% improvement in forecast accuracy through advanced statistical methods.</p>
+                    <div class="tags">
+                        <span class="tag">Excel</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">DCF</span>
+                        <span class="tag">Valuation</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3>Risk Management Dashboard</h3>
+                    <p>Interactive dashboard analyzing portfolio risk metrics including VaR, beta analysis, and correlation matrices for a $50M investment fund.</p>
+                    <div class="tags">
+                        <span class="tag">Tableau</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Risk Analysis</span>
+                        <span class="tag">VaR</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3>Market Trend Analysis</h3>
+                    <p>Predictive model using machine learning to identify market trends and optimal entry/exit points. Backtested with 3 years of historical data.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Time Series</span>
+                        <span class="tag">Trading</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3>Credit Risk Assessment</h3>
+                    <p>Developed a comprehensive credit scoring model for loan applications, reducing default risk by 22% through advanced feature engineering.</p>
+                    <div class="tags">
+                        <span class="tag">R</span>
+                        <span class="tag">Credit Analysis</span>
+                        <span class="tag">Statistics</span>
+                        <span class="tag">Modeling</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3>ESG Investment Analysis</h3>
+                    <p>Analyzed correlation between ESG scores and financial performance across 500+ companies, creating sustainable investment framework.</p>
+                    <div class="tags">
+                        <span class="tag">ESG</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Data Visualization</span>
+                        <span class="tag">Sustainability</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3>Crypto Portfolio Optimizer</h3>
+                    <p>Modern Portfolio Theory application for cryptocurrency investments with real-time data integration and automated rebalancing strategies.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">APIs</span>
+                        <span class="tag">Portfolio Theory</span>
+                        <span class="tag">Crypto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Claire Lee Bolam. All rights reserved.</p>
-  </footer>
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming & Analysis</h4>
+                    <ul class="skill-list">
+                        <li>Python (Pandas, NumPy, Scikit-learn)</li>
+                        <li>R (Quantmod, PerformanceAnalytics)</li>
+                        <li>SQL (PostgreSQL, MySQL)</li>
+                        <li>VBA & Advanced Excel</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Financial Modeling</h4>
+                    <ul class="skill-list">
+                        <li>DCF & Valuation Models</li>
+                        <li>Monte Carlo Simulation</li>
+                        <li>Options Pricing (Black-Scholes)</li>
+                        <li>Risk Management (VaR, CVaR)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Data Visualization</h4>
+                    <ul class="skill-list">
+                        <li>Tableau & Power BI</li>
+                        <li>Python (Matplotlib, Plotly)</li>
+                        <li>R (ggplot2, Shiny)</li>
+                        <li>Interactive Dashboards</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Certifications</h4>
+                    <ul class="skill-list">
+                        <li>CFA Level II Candidate</li>
+                        <li>Financial Modeling & Valuation</li>
+                        <li>Python for Finance</li>
+                        <li>Bloomberg Market Concepts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+        <div class="cta">
+            <a href="mailto:claire.lee.bolam@gmail.com" class="cta-button">
+                Let's Connect
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate portfolio items on scroll
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            portfolioItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+            
+            // Add click handlers for portfolio items
+            portfolioItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Add a subtle pulse effect
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
