@@ -1,524 +1,563 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claire Lee Bolam - Financial Analyst Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Claire Lee Bolam - Financial Analyst Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #2d3748;
-            background: linear-gradient(135deg, #0a214a 0%, #0b2d5e 50%, #0d3a78 100%);
-            min-height: 100vh;
-        }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #2d3748;
+      background: linear-gradient(135deg, #0a214a 0%, #0b2d5e 50%, #0d3a78 100%);
+      min-height: 100vh;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            margin-bottom: 3rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
+    .hero {
+      text-align: center;
+      padding: 4rem 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      margin-bottom: 3rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-        .profile-image {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            margin: 0 auto 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-            transition: transform 0.3s ease;
-        }
+    .profile-image {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      margin: 0 auto 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: white;
+      font-weight: bold;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+      transition: transform 0.3s ease;
+      overflow: hidden;
+    }
 
-        .profile-image:hover {
-            transform: scale(1.05);
-        }
+    .profile-image:hover {
+      transform: scale(1.05);
+    }
 
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-        .subtitle {
-            font-size: 1.3rem;
-            color: #718096;
-            margin-bottom: 2rem;
-        }
+    .subtitle {
+      font-size: 1.3rem;
+      color: #718096;
+      margin-bottom: 2rem;
+    }
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #4a5568;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            background: rgba(102, 126, 234, 0.1);
-            transition: all 0.3s ease;
-        }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #4a5568;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      background: rgba(102, 126, 234, 0.1);
+      transition: all 0.3s ease;
+    }
 
-        .contact-item:hover {
-            background: rgba(102, 126, 234, 0.2);
-            transform: translateY(-2px);
-        }
+    .contact-item:hover {
+      background: rgba(102, 126, 234, 0.2);
+      transform: translateY(-2px);
+    }
 
-        .section {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
+    .section {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 3rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-        .section h2 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: #2d3748;
-            position: relative;
-            padding-bottom: 1rem;
-        }
+    .section h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #2d3748;
+      position: relative;
+      padding-bottom: 1rem;
+    }
 
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 2px;
-        }
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
 
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
 
-        .portfolio-item {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
-            border-radius: 15px;
-            padding: 2rem;
-            border: 1px solid rgba(102, 126, 234, 0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
+    .portfolio-item {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+      border-radius: 15px;
+      padding: 2rem;
+      border: 1px solid rgba(102, 126, 234, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
 
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
-            border-color: rgba(102, 126, 234, 0.3);
-        }
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+      border-color: rgba(102, 126, 234, 0.3);
+    }
 
-        .portfolio-item h3 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #2d3748;
-        }
+    .portfolio-item h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #2d3748;
+    }
 
-        .portfolio-item p {
-            color: #718096;
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
+    .portfolio-item p {
+      color: #718096;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
 
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
 
-        .tag {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
+    .tag {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
 
-        .skill-category {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
-            border-radius: 15px;
-            padding: 1.5rem;
-            border: 1px solid rgba(102, 126, 234, 0.1);
-        }
+    .skill-category {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+      border-radius: 15px;
+      padding: 1.5rem;
+      border: 1px solid rgba(102, 126, 234, 0.1);
+    }
 
-        .skill-category h4 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #2d3748;
-        }
+    .skill-category h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #2d3748;
+    }
 
-        .skill-list {
-            list-style: none;
-        }
+    .skill-list {
+      list-style: none;
+    }
 
-        .skill-list li {
-            color: #718096;
-            margin-bottom: 0.5rem;
-            padding-left: 1rem;
-            position: relative;
-        }
+    .skill-list li {
+      color: #718096;
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      position: relative;
+    }
 
-        .skill-list li::before {
-            content: '▶';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-size: 0.8rem;
-        }
+    .skill-list li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: #667eea;
+      font-size: 0.8rem;
+    }
 
-        .cta {
-            text-align: center;
-            margin-top: 3rem;
-        }
+    .cta {
+      text-align: center;
+      margin-top: 3rem;
+    }
 
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-        }
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
-        }
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    }
 
-        .floating-elements {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
+    .floating-elements {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
 
-        .floating-circle {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            animation: float 20s infinite ease-in-out;
-        }
+    .floating-circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      animation: float 20s infinite ease-in-out;
+    }
 
-        .floating-circle:nth-child(1) {
-            width: 80px;
-            height: 80px;
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
+    .floating-circle:nth-child(1) {
+      width: 80px;
+      height: 80px;
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+    }
 
-        .floating-circle:nth-child(2) {
-            width: 120px;
-            height: 120px;
-            top: 60%;
-            right: 15%;
-            animation-delay: 5s;
-        }
+    .floating-circle:nth-child(2) {
+      width: 120px;
+      height: 120px;
+      top: 60%;
+      right: 15%;
+      animation-delay: 5s;
+    }
 
-        .floating-circle:nth-child(3) {
-            width: 60px;
-            height: 60px;
-            bottom: 20%;
-            left: 20%;
-            animation-delay: 10s;
-        }
+    .floating-circle:nth-child(3) {
+      width: 60px;
+      height: 60px;
+      bottom: 20%;
+      left: 20%;
+      animation-delay: 10s;
+    }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-30px) rotate(120deg); }
-            66% { transform: translateY(15px) rotate(240deg); }
-        }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(-30px) rotate(120deg); }
+      66% { transform: translateY(15px) rotate(240deg); }
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .section {
-                padding: 2rem;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+      }
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+      .section {
+        padding: 2rem;
+      }
+    }
+
+    /* Footer styles */
+    .site-footer {
+      margin-top: 3rem;
+      padding: 2rem 1rem;
+      color: #f8fafc;
+      background: linear-gradient(135deg, rgba(102,126,234,0.25), rgba(118,75,162,0.25));
+      border-top: 1px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(10px);
+    }
+    .site-footer .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .site-footer p {
+      margin: 0.25rem 0;
+      color: #e5e7eb;
+    }
+    .site-footer a {
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .site-footer a:hover {
+      text-decoration: none;
+      opacity: 0.9;
+    }
+    .site-footer .dot {
+      margin: 0 0.5rem;
+      opacity: 0.8;
+    }
+  </style>
 </head>
 <body>
-    <div class="floating-elements">
-        <div class="floating-circle"></div>
-        <div class="floating-circle"></div>
-        <div class="floating-circle"></div>
-    </div>
+  <div class="floating-elements">
+    <div class="floating-circle"></div>
+    <div class="floating-circle"></div>
+    <div class="floating-circle"></div>
+  </div>
 
   <div class="container">
     <div class="hero">
-        <div class="profile-image">
-            <img src="Me.jpg" alt="Claire Lee Bolam" style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain;">
-        </div>
-        <h1>Claire Lee Bolam</h1>
-        <p class="subtitle">Financial Analyst & Data Strategist</p>
-        <div class="contact-info">
-            <a href="mailto:claire.lee.bolam@gmail.com" class="contact-item">
-                📧 claire.lee.bolam@gmail.com
-            </a>
-        </div>
-    </div>
-</div>
-
-        <div class="section">
-            <h2>About Me</h2>
-            <p style="font-size: 1.1rem; color: #4a5568; line-height: 1.8;">
-I’m a data-driven Financial Analyst with strengths in valuation, corporate finance, and investment analysis, paired with hands-on data science skills. I develop Python-based data pipelines to automate data collection (APIs/web scraping), perform robust cleaning and feature engineering, and produce decision-ready analytics. Using econometrics, I design and execute rigorous economics research that explains macro and firm-level dynamics, translating complex datasets into investment theses and strategy recommendations.
-
-        </div>
-
-        <div class="section">
-            <h2>Portfolio Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <h3>Equity Valuation Model</h3>
-                    <p>Equity Valuation Model (Tech): Developed a comprehensive DCF framework emphasizing driver-based revenue, margin, and cash-flow modeling for tech companies. Built robust sensitivity and scenario analyses to quantify valuation impact from key assumptions (growth, margins, WACC, terminal value). Conducted comparable and precedent cross-checks to validate assumptions and triangulate valuation ranges. Produced investor-ready Excel models with clear audit trails and input sheets. </p>
-                    <div class="tags">
-                        <span class="tag">Excel</span>
-                        <span class="tag">Scenario Modeling</span>
-                        <span class="tag">DCF</span>
-                        <span class="tag">Valuation</span>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <h3>Risk Management Dashboard</h3>
-                    <p>Interactive dashboard analyzing portfolio risk metrics including VaR, beta analysis, and correlation matrices for a $500,000 investment fund.</p>
-                    <div class="tags">
-                        <span class="tag">Tableau</span>
-                        <span class="tag">Risk Analysis</span>
-                        <span class="tag">VaR</span>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <h3>Market Trend Analysis</h3>
-                    <p>Predictive model using machine learning to identify market trends and optimal entry/exit points. Backtested with 3 years of historical data.</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Time Series</span>
-                        <span class="tag">Trading</span>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <h3> Equity Data Pipeline and Risk Analytics Tool</h3>
-                    <p> Automated Python pipeline and research workflow surfacing daily “likely shorts” for a U.S.-based investor. Built a 100+ company cyclical universe and a weighted Fragility Index to rank candidates, delivering a refreshed, analysis-ready dataset and improving short idea generation consistency.</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Market Research</span>
-                        <span class="tag">Financial Modeling</span>
-                    </div>
-                </div>
-                     
-                <div class="portfolio-item">
-                    <h3>Credit Risk Assessment</h3>
-                    <p>Econometrics-focused researcher with a track record in causal inference, panel data analysis, and reproducible research pipelines. Published in The Review of International Organizations. Deliver empirical insights for policy and markets with clear, decision-ready outputs.</p>
-                    <div class="tags">
-                  <span class="tag">Python</span>
-                    <span class="tag">Credit Risk</span>
-                    <span class="tag">PD Modeling</span>
-                    <span class="tag">Stress Testing</span>
-                    </div>
-                </div>
-
-
-<a
-  href="https://link.springer.com/article/10.1007/s11558-024-09542-7"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Open published paper: Quant (Econometrics) Research — IMF programs and women's labor market outcomes"
-  class="portfolio-link"
->
-  <div class="portfolio-item">
-    <h3>Quant (Econometrics) Research</h3>
-    <p>
-      Co-authored a peer-reviewed study published in The Review of International Organizations (Spring 2024) on the unintended consequences of IMF programs for women’s labor market outcomes, featuring quantitatively heavy analysis: large-scale data assembly/cleaning and Python- and R-based econometrics (panel regressions, fixed effects, sensitivity and robustness tests) that reveal robust gender-differentiated effects and policy trade-offs.
-    </p>
-    <div class="actions">
-      <span class="btn as-link">View paper</span>
-    </div>
-    <div class="tags">
-      <span class="tag">R</span>
-      <span class="tag">Python</span>
-      <span class="tag">Econometrics</span>
-      <span class="tag">Panel Data</span>
-      <span class="tag">Fixed Effects</span>
-      <span class="tag">Statistical Analysis</span>
+      <div class="profile-image">
+        <img src="Me.jpg" alt="Claire Lee Bolam" style="width: 100%; height: 100%; border-radius: 50%; object-fit: contain;">
+      </div>
+      <h1>Claire Lee Bolam</h1>
+      <p class="subtitle">Financial Analyst & Data Strategist</p>
+      <div class="contact-info">
+        <a href="mailto:claire.lee.bolam@gmail.com" class="contact-item">
+          📧 claire.lee.bolam@gmail.com
+        </a>
+      </div>
     </div>
   </div>
-</a>
 
+  <div class="section">
+    <h2>About Me</h2>
+    <p style="font-size: 1.1rem; color: #4a5568; line-height: 1.8;">
+      I’m a data-driven Financial Analyst with strengths in valuation, corporate finance, and investment analysis, paired with hands-on data science skills. I develop Python-based data pipelines to automate data collection (APIs/web scraping), perform robust cleaning and feature engineering, and produce decision-ready analytics. Using econometrics, I design and execute rigorous economics research that explains macro and firm-level dynamics, translating complex datasets into investment theses and strategy recommendations.
+    </p>
+  </div>
 
-
-
-                
-            </div>
+  <div class="section">
+    <h2>Portfolio Projects</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <h3>Equity Valuation Model</h3>
+        <p>Equity Valuation Model (Tech): Developed a comprehensive DCF framework emphasizing driver-based revenue, margin, and cash-flow modeling for tech companies. Built robust sensitivity and scenario analyses to quantify valuation impact from key assumptions (growth, margins, WACC, terminal value). Conducted comparable and precedent cross-checks to validate assumptions and triangulate valuation ranges. Produced investor-ready Excel models with clear audit trails and input sheets.</p>
+        <div class="tags">
+          <span class="tag">Excel</span>
+          <span class="tag">Scenario Modeling</span>
+          <span class="tag">DCF</span>
+          <span class="tag">Valuation</span>
         </div>
+      </div>
 
-        <div class="section">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Programming & Analysis</h4>
-                    <ul class="skill-list">
-                        <li>Python (Pandas, NumPy, Scikit-learn)</li>
-                        <li>R (Quantmod, PerformanceAnalytics)</li>
-                        <li>VBA & Advanced Excel</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>Financial Modeling</h4>
-                    <ul class="skill-list">
-                        <li>DCF & Valuation Models</li>
-                        <li>Monte Carlo Simulation</li>
-                        <li>Options Pricing (Black-Scholes)</li>
-                        <li>Risk Management (VaR, CVaR)</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>Data Visualization</h4>
-                    <ul class="skill-list">
-                        <li>Tableau & Power BI</li>
-                        <li>Python (Matplotlib, Plotly)</li>
-                        <li>R (ggplot2, Shiny)</li>
-                        <li>Interactive Dashboards</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h4>Certifications</h4>
-                    <ul class="skill-list">
-                        <li>Financial Modeling & Valuation</li>
-                        <li>Python for Finance</li>
-                        <li>Bloomberg Market Concepts</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="portfolio-item">
+        <h3>Risk Management Dashboard</h3>
+        <p>Interactive dashboard analyzing portfolio risk metrics including VaR, beta analysis, and correlation matrices for a $500,000 investment fund.</p>
+        <div class="tags">
+          <span class="tag">Tableau</span>
+          <span class="tag">Risk Analysis</span>
+          <span class="tag">VaR</span>
         </div>
+      </div>
 
-        <div class="cta">
-            <a href="mailto:claire.lee.bolam@gmail.com" class="cta-button">
-                Let's Connect
-            </a>
+      <div class="portfolio-item">
+        <h3>Market Trend Analysis</h3>
+        <p>Predictive model using machine learning to identify market trends and optimal entry/exit points. Backtested with 3 years of historical data.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Time Series</span>
+          <span class="tag">Trading</span>
         </div>
+      </div>
+
+      <div class="portfolio-item">
+        <h3>Equity Data Pipeline and Risk Analytics Tool</h3>
+        <p>Automated Python pipeline and research workflow surfacing daily “likely shorts” for a U.S.-based investor. Built a 100+ company cyclical universe and a weighted Fragility Index to rank candidates, delivering a refreshed, analysis-ready dataset and improving short idea generation consistency.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Market Research</span>
+          <span class="tag">Financial Modeling</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <h3>Credit Risk Assessment</h3>
+        <p>Econometrics-focused researcher with a track record in causal inference, panel data analysis, and reproducible research pipelines. Published in The Review of International Organizations. Deliver empirical insights for policy and markets with clear, decision-ready outputs.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Credit Risk</span>
+          <span class="tag">PD Modeling</span>
+          <span class="tag">Stress Testing</span>
+        </div>
+      </div>
+
+      <a
+        href="https://link.springer.com/article/10.1007/s11558-024-09542-7"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open published paper: Quant (Econometrics) Research — IMF programs and women's labor market outcomes"
+        class="portfolio-link"
+        style="text-decoration: none;"
+      >
+        <div class="portfolio-item">
+          <h3>Quant (Econometrics) Research</h3>
+          <p>
+            Co-authored a peer-reviewed study published in The Review of International Organizations (Spring 2024) on the unintended consequences of IMF programs for women’s labor market outcomes, featuring quantitatively heavy analysis: large-scale data assembly/cleaning and Python- and R-based econometrics (panel regressions, fixed effects, sensitivity and robustness tests) that reveal robust gender-differentiated effects and policy trade-offs.
+          </p>
+          <div class="actions">
+            <span class="btn as-link">View paper</span>
+          </div>
+          <div class="tags">
+            <span class="tag">R</span>
+            <span class="tag">Python</span>
+            <span class="tag">Econometrics</span>
+            <span class="tag">Panel Data</span>
+            <span class="tag">Fixed Effects</span>
+            <span class="tag">Statistical Analysis</span>
+          </div>
+        </div>
+      </a>
     </div>
+  </div>
 
-    <script>
-        // Add smooth scrolling and interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate portfolio items on scroll
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
-            
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-            
-            portfolioItems.forEach(item => {
-                item.style.opacity = '0';
-                item.style.transform = 'translateY(20px)';
-                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(item);
-            });
-            
-            // Add click handlers for portfolio items
-            portfolioItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    // Add a subtle pulse effect
-                    this.style.transform = 'scale(0.98)';
-                    setTimeout(() => {
-                        this.style.transform = 'scale(1)';
-                    }, 150);
-                });
-            });
+  <div class="section">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h4>Programming & Analysis</h4>
+        <ul class="skill-list">
+          <li>Python (Pandas, NumPy, Scikit-learn)</li>
+          <li>R (Quantmod, PerformanceAnalytics)</li>
+          <li>VBA & Advanced Excel</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h4>Financial Modeling</h4>
+        <ul class="skill-list">
+          <li>DCF & Valuation Models</li>
+          <li>Monte Carlo Simulation</li>
+          <li>Options Pricing (Black-Scholes)</li>
+          <li>Risk Management (VaR, CVaR)</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h4>Data Visualization</h4>
+        <ul class="skill-list">
+          <li>Tableau & Power BI</li>
+          <li>Python (Matplotlib, Plotly)</li>
+          <li>R (ggplot2, Shiny)</li>
+          <li>Interactive Dashboards</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h4>Certifications</h4>
+        <ul class="skill-list">
+          <li>Financial Modeling & Valuation</li>
+          <li>Python for Finance</li>
+          <li>Bloomberg Market Concepts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <a href="mailto:claire.lee.bolam@gmail.com" class="cta-button">Let's Connect</a>
+  </div>
+
+  <script>
+    // Animate portfolio items on scroll and add click pulse
+    document.addEventListener('DOMContentLoaded', function() {
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
         });
-    </script>
+      }, observerOptions);
+
+      portfolioItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(item);
+      });
+
+      portfolioItems.forEach(item => {
+        item.addEventListener('click', function() {
+          this.style.transform = 'scale(0.98)';
+          setTimeout(() => {
+            this.style.transform = 'scale(1)';
+          }, 150);
+        });
+      });
+    });
+
+    // Auto-set current year in footer
+    document.addEventListener('DOMContentLoaded', function () {
+      const yearEl = document.getElementById('copyright-year');
+      if (yearEl) yearEl.textContent = `© ${new Date().getFullYear()}`;
+    });
+  </script>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>
+        <span id="copyright-year"></span> Claire Lee Bolam — All rights reserved.
+        <span class="dot">•</span>
+        Built by me with HTML/CSS/JS and deployed via
+        <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+      </p>
+      <p class="made-by">
+        Source:
+        <a href="https://github.com/CL0110/financial-portfolio" target="_blank" rel="noopener noreferrer">
+          github.com/CL0110/financial-portfolio
+        </a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
