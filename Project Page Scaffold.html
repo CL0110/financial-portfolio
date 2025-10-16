@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Title — Claire Lee Bolam</title>
+  <meta name="description" content="Short one-line description of the project.">
+  <link rel="canonical" href="https://<your-gh-pages-domain>/<project-filename>.html">
+  <style>
+    :root {
+      --bg1: #0a214a; --bg2: #0b2d5e; --bg3: #0d3a78;
+      --ink: #2d3748; --muted: #718096;
+      --grad1: #667eea; --grad2: #764ba2;
+      --panel: rgba(255, 255, 255, 0.95);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7; color: var(--ink);
+      background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 50%, var(--bg3) 100%);
+      min-height: 100vh;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+    .top-nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,0.9); backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .top-nav .nav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0.75rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand { color: var(--ink); font-weight: 700; text-decoration: none; }
+    .nav-links { display: flex; gap: 1rem; }
+    .nav-links a {
+      color: #4a5568; text-decoration: none; font-weight: 500;
+      padding: 0.25rem 0.5rem; border-radius: 6px; transition: background 0.2s ease;
+    }
+    .nav-links a:hover { background: rgba(102,126,234,0.12); }
+    .section {
+      background: var(--panel); backdrop-filter: blur(10px);
+      border-radius: 20px; padding: 2rem; margin: 2rem 0;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    h1 {
+      font-size: 2.2rem; font-weight: 800; margin-bottom: 0.25rem;
+      background: linear-gradient(135deg, var(--grad1), var(--grad2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .subtitle { color: var(--muted); margin-bottom: 1rem; }
+    h2 { font-size: 1.5rem; margin: 1.5rem 0 0.75rem; }
+    p, li { color: #4a5568; }
+    .meta {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem;
+    }
+    .chip {
+      background: linear-gradient(135deg, rgba(102,126,234,0.12), rgba(118,75,162,0.12));
+      color: #374151; padding: 0.25rem 0.6rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid rgba(102,126,234,0.25);
+    }
+    .grid {
+      display: grid; gap: 1rem; grid-template-columns: 1fr 1fr;
+    }
+    .panel {
+      background: linear-gradient(135deg, rgba(102,126,234,0.05), rgba(118,75,162,0.05));
+      border: 1px solid rgba(102,126,234,0.15);
+      border-radius: 14px; padding: 1rem;
+    }
+    .cta-row {
+      display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;
+    }
+    .btn {
+      display: inline-block; text-decoration: none; font-weight: 600;
+      padding: 0.75rem 1.25rem; border-radius: 999px; transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-primary {
+      color: #fff; background: linear-gradient(135deg, var(--grad1), var(--grad2));
+      box-shadow: 0 10px 30px rgba(102,126,234,0.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(102,126,234,0.4); }
+    .btn-ghost { color: var(--ink); background: rgba(255,255,255,0.7); }
+    .site-footer {
+      margin-top: 2rem; padding: 2rem 1rem; color: #f8fafc;
+      background: linear-gradient(135deg, rgba(102,126,234,0.25), rgba(118,75,162,0.25));
+      border-top: 1px solid rgba(255,255,255,0.25); backdrop-filter: blur(10px);
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+    @media (max-width: 768px) {
+      .container { padding: 1rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top navigation -->
+  <nav class="top-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="./index.html" class="brand">Claire Lee Bolam</a>
+      <div class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./equity-valuation-model.html">Equity Valuation Model</a>
+        <!-- Add more project links here as they’re created -->
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Header / Hero -->
+    <section class="section" aria-labelledby="project-title">
+      <h1 id="project-title">Project Title</h1>
+      <p class="subtitle">One-sentence summary highlighting outcome and tools.</p>
+      <div class="meta">
+        <span class="chip">Role: Analyst</span>
+        <span class="chip">Tools: Excel, Python</span>
+        <span class="chip">Year: 2025</span>
+      </div>
+      <div class="cta-row">
+        <a href="./index.html" class="btn btn-ghost" aria-label="Back to Portfolio">← Back to Portfolio</a>
+        <!-- Optional external links -->
+        <!-- <a href="https://link-to-doc-or-repo" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Repo</a> -->
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section">
+      <h2>Overview</h2>
+      <p>Describe the project context, goal, and who it’s for.</p>
+    </section>
+
+    <!-- Approach / Methodology -->
+    <section class="section">
+      <h2>Approach</h2>
+      <div class="grid">
+        <div class="panel">
+          <h3>Modeling</h3>
+          <p>Outline your modeling/valuation approach.</p>
+        </div>
+        <div class="panel">
+          <h3>Data & Tools</h3>
+          <p>Summarize the data sources and tools used.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results / Artifacts -->
+    <section class="section">
+      <h2>Results</h2>
+      <p>Key outcomes, metrics, or artifacts delivered.</p>
+    </section>
+
+    <!-- Tags -->
+    <section class="section">
+      <h2>Skills & Topics</h2>
+      <div class="meta">
+        <span class="chip">DCF</span>
+        <span class="chip">Scenario Analysis</span>
+        <span class="chip">Valuation</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> Claire Lee Bolam — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year
+    document.addEventListener('DOMContentLoaded', function () {
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
