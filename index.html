@@ -188,6 +188,11 @@
       border-color: rgba(102, 126, 234, 0.3);
     }
 
+    /* New: press effect handled by CSS (no JS click needed) */
+    .portfolio-item:active {
+      transform: scale(0.98);
+    }
+
     .portfolio-item h3 {
       font-size: 1.4rem;
       font-weight: 600;
@@ -436,7 +441,7 @@
     <h2>Portfolio Projects</h2>
     <div class="portfolio-grid">
       <a href="./equity-valuation-model.html" style="text-decoration: none;">
-        <div class="portfolio-item" role="link" aria-label="Open Equity Valuation Model">
+        <div class="portfolio-item" aria-label="Open Equity Valuation Model">
           <h3>Equity Valuation Model</h3>
           <p>Equity Valuation Model (Tech): Developed a comprehensive DCF framework emphasizing driver-based revenue, margin, and cash-flow modeling for tech companies. Built robust sensitivity and scenario analyses to quantify valuation impact from key assumptions (growth, margins, WACC, terminal value). Conducted comparable and precedent cross-checks to validate assumptions and triangulate valuation ranges. Produced investor-ready Excel models with clear audit trails and input sheets.</p>
           <div class="tags">
@@ -558,7 +563,7 @@
   </div>
 
   <script>
-    // Animate portfolio items on scroll and add click pulse
+    // Animate portfolio items on scroll (removed click pulse to avoid interfering with links)
     document.addEventListener('DOMContentLoaded', function() {
       const portfolioItems = document.querySelectorAll('.portfolio-item');
 
@@ -581,15 +586,6 @@
         item.style.transform = 'translateY(20px)';
         item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(item);
-      });
-
-      portfolioItems.forEach(item => {
-        item.addEventListener('click', function() {
-          this.style.transform = 'scale(0.98)';
-          setTimeout(() => {
-            this.style.transform = 'scale(1)';
-          }, 150);
-        });
       });
     });
 
