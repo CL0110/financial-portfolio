@@ -250,7 +250,9 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  justify-content: center; 
 }
+
 
 .tag {
   background: linear-gradient(135deg, #667eea, #764ba2);
