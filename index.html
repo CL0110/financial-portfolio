@@ -25,6 +25,44 @@
       padding: 2rem;
     }
 
+    /* Top navigation */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .top-nav .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      color: #2d3748;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-links a {
+      color: #4a5568;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+    .nav-links a:hover {
+      background: rgba(102,126,234,0.12);
+    }
+
     .hero {
       text-align: center;
       padding: 4rem 0;
@@ -306,6 +344,10 @@
       .section {
         padding: 2rem;
       }
+      .top-nav .nav-inner {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
     }
 
     /* Footer styles */
@@ -349,6 +391,17 @@
     <div class="floating-circle"></div>
   </div>
 
+  <!-- Top navigation -->
+  <nav class="top-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="./index.html" class="brand">Claire Lee Bolam</a>
+      <div class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./projects/equity-valuation-model.html">Equity Valuation Model</a>
+      </div>
+    </div>
+  </nav>
+
   <div class="container">
     <div class="hero">
       <div class="profile-image">
@@ -359,6 +412,14 @@
       <div class="contact-info">
         <a href="mailto:clbolam@clbolam.info" class="contact-item">
           📧 clbolam@clbolam.info
+        </a>
+        <a href="./projects/equity-valuation-model.html" class="contact-item" aria-label="Open Equity Valuation Model">
+          📄 Equity Valuation Model
+        </a>
+      </div>
+      <div class="cta">
+        <a href="./projects/equity-valuation-model.html" class="cta-button" aria-label="View Equity Valuation Model">
+          View Equity Valuation Model
         </a>
       </div>
     </div>
@@ -374,21 +435,33 @@
   <div class="section">
     <h2>Portfolio Projects</h2>
     <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <h3>Equity Valuation Model</h3>
-        <p>Equity Valuation Model (Tech): Developed a comprehensive DCF framework emphasizing driver-based revenue, margin, and cash-flow modeling for tech companies. Built robust sensitivity and scenario analyses to quantify valuation impact from key assumptions (growth, margins, WACC, terminal value). Conducted comparable and precedent cross-checks to validate assumptions and triangulate valuation ranges. Produced investor-ready Excel models with clear audit trails and input sheets.</p>
+      <a href="./projects/equity-valuation-model.html" style="text-decoration: none;">
+        <div class="portfolio-item" role="link" aria-label="Open Equity Valuation Model">
+          <h3>Equity Valuation Model</h3>
+          <p>Equity Valuation Model (Tech): Developed a comprehensive DCF framework emphasizing driver-based revenue, margin, and cash-flow modeling for tech companies. Built robust sensitivity and scenario analyses to quantify valuation impact from key assumptions (growth, margins, WACC, terminal value). Conducted comparable and precedent cross-checks to validate assumptions and triangulate valuation ranges. Produced investor-ready Excel models with clear audit trails and input sheets.</p>
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Scenario Modeling</span>
+            <span class="tag">DCF</span>
+            <span class="tag">Valuation</span>
+          </div>
+        </div>
+      </a>
+      
+      <div class="portfolio-item"> 
+        <h3>Factor-Based Model Portfolio</h3>
+        <p>Designed and implemented a systematic, factor-driven model portfolio to demonstrate applied investment research and portfolio construction. Built a disciplined process to define a universe (S&P 500 and sector subsets), engineer multi-factor signals (value, quality, momentum, low volatility), and rank securities via composite scoring. Established rules-based portfolio construction with exposure and risk limits, scheduled rebalancing, and performance attribution to isolate factor contributions. Documented investment theses, decision rationale, and a continuous improvement loop to refine signals, constraints, and execution based on results and market conditions.</p>
         <div class="tags">
-          <span class="tag">Excel</span>
-          <span class="tag">Scenario Modeling</span>
-          <span class="tag">DCF</span>
-          <span class="tag">Valuation</span>
+          <span class="tag">Factor Investing</span>
+          <span class="tag">Systematic Strategies</span>
+          <span class="tag">Portfolio Construction</span>
+          <span class="tag">Risk Management</span>
+          <span class="tag">Backtesting</span>
+          <span class="tag">Python/Excel</span>
+          <span class="tag">Performance Attribution</span>
+          <span class="tag">Data Analysis</span>
         </div>
       </div>
-      
-<div class="portfolio-item"> 
-  <h3>Factor-Based Model Portfolio</h3> <p>Designed and implemented a systematic, factor-driven model portfolio to demonstrate applied investment research and portfolio construction. Built a disciplined process to define a universe (S&P 500 and sector subsets), engineer multi-factor signals (value, quality, momentum, low volatility), and rank securities via composite scoring. Established rules-based portfolio construction with exposure and risk limits, scheduled rebalancing, and performance attribution to isolate factor contributions. Documented investment theses, decision rationale, and a continuous improvement loop to refine signals, constraints, and execution based on results and market conditions.</p> <div class="tags"> <span class="tag">Factor Investing</span> <span class="tag">Systematic Strategies</span> <span class="tag">Portfolio Construction</span> <span class="tag">Risk Management</span> <span class="tag">Backtesting</span> <span class="tag">Python/Excel</span> <span class="tag">Performance Attribution</span> <span class="tag">Data Analysis</span> </div> </div>
-
-   
 
       <div class="portfolio-item">
         <h3>Equity Data Pipeline and Risk Analytics Tool</h3>
@@ -410,8 +483,6 @@
           <span class="tag">Stress Testing</span>
         </div>
       </div>
-
-      
 
       <a
         href="https://link.springer.com/article/10.1007/s11558-024-09542-7"
