@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Project detail page -->
+  <!-- Project detail page (moved to root) -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Equity Valuation Model — Claire Lee Bolam</title>
@@ -14,14 +14,14 @@
   <meta property="og:title" content="Equity Valuation Model — Claire Lee Bolam" />
   <meta property="og:description" content="Driver-based DCF for tech companies with scenario and sensitivity analysis." />
   <meta property="og:image" content="https://picsum.photos/1200/630?random=21" />
-  <meta property="og:url" content="https://yourdomain.com/projects/equity-valuation-model.html" />
-  <link rel="canonical" href="https://yourdomain.com/projects/equity-valuation-model.html" />
+  <!-- Update your domain/repo path below -->
+  <meta property="og:url" content="https://yourdomain.com/equity-valuation-model.html" />
+  <link rel="canonical" href="https://yourdomain.com/equity-valuation-model.html" />
 
-  <!-- Optional perf: prefetch root index page -->
-  <link rel="prefetch" href="../index.html" as="document">
+  <!-- Optional perf: prefetch home page -->
+  <link rel="prefetch" href="./index.html" as="document">
 
   <style>
-    /* Inherit your site’s look-and-feel; identical palette and components */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -120,8 +120,8 @@
   <div class="container">
     <header class="header" role="banner">
       <div class="brand">Claire Lee Bolam</div>
-      <!-- Correct: go up to root index -->
-      <a class="back-link" href="../index.html" aria-label="Back to Portfolio">← Back to Portfolio</a>
+      <!-- Back to root index now that this file is at root -->
+      <a class="back-link" href="./index.html" aria-label="Back to Portfolio">← Back to Portfolio</a>
     </header>
 
     <!-- HERO -->
@@ -137,24 +137,22 @@
           <span class="tag">Excel</span>
         </div>
         <div class="link-row" style="margin-top: 0.85rem;">
-          <!-- Correct: back to root index -->
-          <a class="btn" href="../index.html">Back to Portfolio</a>
+          <a class="btn" href="./index.html">Back to Portfolio</a>
           <a class="btn secondary" href="#" aria-disabled="true">View Code (Coming Soon)</a>
           <a class="btn secondary" href="#" aria-disabled="true">Download PDF (Coming Soon)</a>
         </div>
       </div>
       <figure class="hero-media">
-        <!-- Placeholder image; replace src when you have visuals -->
         <img src="https://picsum.photos/960/640?random=20"
              alt="Placeholder visual for Equity Valuation Model" loading="lazy" />
       </figure>
     </section>
 
-    <!-- Optional: show your profile image from root if desired -->
-    <!-- Example:
+    <!-- Optional: Author blurb using Me.jpg at root -->
+    <!--
     <section class="section" aria-label="Author">
       <div style="display:flex;align-items:center;gap:1rem;">
-        <img src="../Me.jpg" alt="Claire Lee Bolam" width="72" height="72" style="border-radius:50%;object-fit:cover;">
+        <img src="./Me.jpg" alt="Claire Lee Bolam" width="72" height="72" style="border-radius:50%;object-fit:cover;">
         <div>
           <strong>Claire Lee Bolam</strong>
           <div class="meta">Financial Analyst & Data Strategist</div>
@@ -230,8 +228,8 @@
     <!-- NAVIGATION -->
     <section class="section" aria-label="Navigation">
       <div class="link-row">
-        <a class="btn" href="../index.html">← Back to Portfolio</a>
-        <!-- If you add more project pages inside /projects, keep relative links within this folder -->
+        <a class="btn" href="./index.html">← Back to Portfolio</a>
+        <!-- If you move other project pages to root, link like below; otherwise keep their /projects path -->
         <a class="btn secondary" href="./factor-based-model-portfolio.html">Next: Factor-Based Model Portfolio</a>
       </div>
     </section>
