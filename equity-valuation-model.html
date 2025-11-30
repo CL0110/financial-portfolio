@@ -1,132 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Project detail page (moved to root) -->
+  <!-- Project detail page -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Equity Valuation Model — Claire Lee Bolam</title>
-  <meta name="description" content="Driver-based DCF for tech companies with scenario and sensitivity analysis. By Claire Lee Bolam." />
-  <meta name="author" content="Claire Lee Bolam" />
+  <title>Backtesting Investment Strategy — Claire Lee</title>
+  <meta name="description" content="Mean reversion backtesting framework with annotated Jupyter Notebook, GitHub repo, and visualizations. By Claire Lee." />
+  <meta name="author" content="Claire Lee" />
   <meta name="theme-color" content="#0b2d5e" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Equity Valuation Model — Claire Lee Bolam" />
-  <meta property="og:description" content="Driver-based DCF for tech companies with scenario and sensitivity analysis." />
-  <meta property="og:image" content="https://picsum.photos/1200/630?random=21" />
-  <!-- Update your domain/repo path below -->
-  <meta property="og:url" content="https://yourdomain.com/equity-valuation-model.html" />
-  <link rel="canonical" href="https://yourdomain.com/equity-valuation-model.html" />
+  <meta property="og:title" content="Backtesting Investment Strategy — Claire Lee" />
+  <meta property="og:description" content="Mean reversion backtesting framework with annotated Jupyter Notebook, GitHub repo, and visualizations." />
+  <meta property="og:image" content="assets/images/backtesting-hero.png" />
+  <meta property="og:url" content="https://claireleeportfolio.com/backtesting-investment-strategy.html" />
+  <link rel="canonical" href="https://claireleeportfolio.com/backtesting-investment-strategy.html" />
 
-  <!-- Optional perf: prefetch home page -->
   <link rel="prefetch" href="./index.html" as="document">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <div class="container">
     <header class="header" role="banner">
-      <div class="brand">Claire Lee Bolam</div>
-      <!-- Back to root index now that this file is at root -->
+      <div class="brand">Claire Lee</div>
       <a class="back-link" href="index.html" aria-label="Back to Portfolio">← Back to Portfolio</a>
     </header>
 
     <!-- HERO -->
     <section class="section hero" aria-labelledby="project-title">
       <div>
-        <h1 id="project-title">Equity Valuation Model</h1>
-        <p class="subtitle">Driver-based DCF with sensitivity and scenario analysis for tech companies.</p>
-        <p class="meta">Role: Financial Analyst • Tools: Excel, VBA • Year: 2024</p>
-        <div class="tags" aria-label="Project tags" >
-          <span class="tag">DCF</span>
-          <span class="tag">Valuation</span>
-          <span class="tag">Scenario Modeling</span>
-          <span class="tag">Excel</span>
+        <h1 id="project-title">Backtesting Investment Strategy</h1>
+        <p class="subtitle">Mean reversion strategy implemented with annotated Jupyter Notebook and reproducible workflows.</p>
+        <p class="meta">Role: Researcher • Tools: Python, Jupyter, GitHub • Year: 2024</p>
+        <div class="tags" aria-label="Project tags">
+          <span class="tag">Backtesting</span>
+          <span class="tag">Mean Reversion</span>
+          <span class="tag">Python</span>
+          <span class="tag">Jupyter</span>
+          <span class="tag">GitHub</span>
         </div>
         <div class="link-row" style="margin-top: 0.85rem;">
           <a class="btn" href="index.html">Back to Portfolio</a>
-          <a class="btn secondary" href="#" aria-disabled="true">View Code (Coming Soon)</a>
-          <a class="btn secondary" href="#" aria-disabled="true">Download PDF (Coming Soon)</a>
+          <a class="btn secondary" href="https://github.com/CL0110/backtesting-strategy" target="_blank">View Code</a>
+          <a class="btn secondary" href="assets/docs/backtesting-strategy.pdf" target="_blank">Download PDF</a>
         </div>
       </div>
       <figure class="hero-media">
-        <img src="https://picsum.photos/960/640?random=20"
-             alt="Placeholder visual for Equity Valuation Model" loading="lazy" />
+        <img src="assets/images/backtesting-hero.png"
+             alt="Screenshot of Backtesting Investment Strategy notebook" loading="lazy" />
       </figure>
     </section>
-
-    <!-- Optional: Author blurb using Me.jpg at root -->
-    <!--
-    <section class="section" aria-label="Author">
-      <div style="display:flex;align-items:center;gap:1rem;">
-        <img src="./Me.jpg" alt="Claire Lee Bolam" width="72" height="72" style="border-radius:50%;object-fit:cover;">
-        <div>
-          <strong>Claire Lee Bolam</strong>
-          <div class="meta">Financial Analyst & Data Strategist</div>
-        </div>
-      </div>
-    </section>
-    -->
 
     <!-- BODY -->
     <section class="content-grid" aria-label="Project content">
       <article class="section prose" aria-labelledby="overview">
         <h2 id="overview">Overview</h2>
         <p>
-          Developed a comprehensive driver-based DCF framework tailored to tech companies. Built revenue, margin, capex,
-          and working capital schedules with clear audit trails and input sheets, enabling transparent assumption changes.
+          This project implements a mean reversion investment strategy using Python and Jupyter Notebook. It includes
+          annotated code, clear explanations of data retrieval, strategy implementation, performance evaluation, and
+          visualizations. The workflow is designed to be reproducible and transparent for both peers and potential employers.
         </p>
 
         <h2 id="responsibilities">Responsibilities</h2>
         <ul class="key-list">
-          <li>Constructed integrated three-statement model with free cash flow outputs.</li>
-          <li>Implemented scenario and sensitivity analyses on growth, margins, WACC, and terminal assumptions.</li>
-          <li>Triangulated results using trading comps and precedent transactions to validate the valuation range.</li>
-          <li>Delivered investor-ready Excel model with documentation and versioned assumptions.</li>
+          <li>Structured the project into annotated Jupyter Notebook sections: data retrieval, strategy, evaluation, visuals.</li>
+          <li>Implemented mean reversion backtesting logic with clear documentation and reproducible workflows.</li>
+          <li>Created performance metrics and charts to evaluate strategy effectiveness.</li>
+          <li>Published the notebook and supporting files on GitHub with a detailed README.</li>
         </ul>
 
         <h2 id="methods">Methods & Stack</h2>
         <div class="card">
           <ul class="key-list">
-            <li>DCF with explicit forecast horizon and terminal value via Gordon Growth and exit multiple cross-checks.</li>
-            <li>Scenario manager for base/bull/bear drivers; data validation and input gating.</li>
-            <li>Excel/VBA for automation, sensitivity tables, and charting of valuation bridges.</li>
+            <li>Python (pandas, NumPy, Matplotlib, Plotly) for data analysis and visualization.</li>
+            <li>Jupyter Notebook for annotated, step-by-step documentation of the workflow.</li>
+            <li>GitHub repository hosting with README and reproducible instructions.</li>
+            <li>Mean reversion strategy backtesting with performance evaluation metrics.</li>
           </ul>
         </div>
 
         <h2 id="results">Results & Impact</h2>
-        <p>
-          Produced a defensible valuation range with quantified sensitivities. Accelerated turnaround time for updates,
-          improved comparability across coverage, and standardized communication of key drivers to stakeholders.
-        </p>
+<p>
+  The backtesting results demonstrated that the mean reversion strategy significantly outperformed the DIA ETF benchmark
+  over the 2016–2025 period. Starting from a $100,000 portfolio, the strategy grew to over $500,000, while the DIA ETF
+  reached approximately $300,000. Despite higher volatility, the strategy delivered superior cumulative returns and
+  showcased the potential of systematic reversion-based approaches.
+</p>
+<p>
+  The project also produced a reproducible workflow, complete with annotated code, performance metrics, and visualizations,
+  enabling transparent evaluation and future enhancements. It provided a clear roadmap for showcasing financial modeling
+  and data science work, and created a professional GitHub repository for sharing with peers, employers, and online communities.
+</p>
       </article>
 
       <aside class="section" aria-labelledby="quick-facts">
         <h2 id="quick-facts">Quick Facts</h2>
-        <div class="card" style="margin-bottom: 0.75rem;">
-          <strong>Company/Universe:</strong> Tech sector coverage
-        </div>
-        <div class="card" style="margin-bottom: 0.75rem;">
-          <strong>Role:</strong> Financial Analyst
-        </div>
-        <div class="card" style="margin-bottom: 0.75rem;">
-          <strong>Tools:</strong> Excel, VBA
-        </div>
-        <div class="card" style="margin-bottom: 0.75rem;">
-          <strong>Timeframe:</strong> 2024
-        </div>
+        <div class="card"><strong>Strategy:</strong> Mean Reversion</div>
+        <div class="card"><strong>Role:</strong> Researcher</div>
+        <div class="card"><strong>Tools:</strong> Python, Jupyter, GitHub</div>
+        <div class="card"><strong>Timeframe:</strong> 2024</div>
 
         <h2 id="resources" style="margin-top: 1rem;">Resources</h2>
         <div class="link-row">
-          <a class="btn secondary" href="#" aria-disabled="true">Model Screenshot (Coming Soon)</a>
-          <a class="btn secondary" href="#" aria-disabled="true">Methodology Notes (Coming Soon)</a>
+          <a class="btn secondary" href="assets/images/backtesting-screenshot.png" target="_blank">Notebook Screenshot</a>
+          <a class="btn secondary" href="assets/docs/backtesting-strategy.pdf" target="_blank">Methodology Notes</a>
         </div>
 
         <h2 id="tags" style="margin-top: 1rem;">Tags</h2>
         <div class="tags">
-          <span class="tag">Valuation</span>
-          <span class="tag">DCF</span>
-          <span class="tag">Sensitivity</span>
-          <span class="tag">Excel</span>
+          <span class="tag">Backtesting</span>
+          <span class="tag">Mean Reversion</span>
+          <span class="tag">Python</span>
+          <span class="tag">Jupyter</span>
+          <span class="tag">GitHub</span>
         </div>
       </aside>
     </section>
@@ -135,7 +122,6 @@
     <section class="section" aria-label="Navigation">
       <div class="link-row">
         <a class="btn" href="./index.html">← Back to Portfolio</a>
-        <!-- If you move other project pages to root, link like below; otherwise keep their /projects path -->
         <a class="btn secondary" href="./factor-based-model-portfolio.html">Next: Factor-Based Model Portfolio</a>
       </div>
     </section>
@@ -144,7 +130,7 @@
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <p>
-        <span id="copyright-year">© 2025</span> Claire Lee Bolam — All rights reserved.
+        <span id="copyright-year">© 2025</span> Claire Lee — All rights reserved.
         <span class="dot">•</span>
         Built with HTML/CSS/JS and deployed via GitHub Pages
       </p>
@@ -166,3 +152,4 @@
   </script>
 </body>
 </html>
+
